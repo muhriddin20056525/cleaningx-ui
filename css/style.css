@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary: #0075ff;
+  --secondary: #211f54;
+  --light-gray: #6e7191;
+  --white: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 122rem;
+  margin: 0px auto;
+  padding-inline: 2rem !important;
+}
+
+.blue-btn {
+  border: none;
+  color: var(--white);
+  border-radius: 1.4rem;
+  background-color: var(--primary);
+}
+
+.section-title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.section-desc {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: var(--light-gray);
+}
+
+/* ================================== HEADER ================================== */
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+header img {
+  width: 17.8rem;
+}
+
+.nav {
+  flex-grow: 1;
+  margin-left: 4rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+}
+
+.nav-list a {
+  color: var(--secondary);
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.header-action span {
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: var(--secondary);
+}
+
+.header-action button {
+  padding: 1.7rem 2.4rem;
+  margin-left: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.header-hamburger {
+  display: none;
+}
+
+/* ================================== RESPONSIVE ================================== */
+
+@media (max-width: 930px) {
+  .header-action {
+    display: none;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    background-color: #dc3545;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .header-hamburger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+  }
+}
