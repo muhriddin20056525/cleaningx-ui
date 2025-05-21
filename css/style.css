@@ -91,9 +91,111 @@ header img {
   display: none;
 }
 
+/* ================================== HERO ================================== */
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.hero-left h1 {
+  font-size: 6.8rem;
+  font-weight: 700;
+  color: var(--secondary);
+  width: 518px;
+  max-width: 100%;
+}
+
+.hero-left p {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: var(--light-gray);
+  margin: 2.2rem 0 3.4rem;
+}
+
+.hero-left_btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-left_btns .blue-btn {
+  padding: 2.6rem 3.8rem;
+}
+
+.hero-btn_phone {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+}
+
+.hero-btn_phone img {
+  width: 7.1rem;
+  height: 7.1rem;
+}
+
+.hero-btn_phone h4 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--light-gray);
+  text-transform: uppercase;
+}
+
+.hero-btn_phone h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.hero-right img {
+  width: 100%;
+}
+
+/* ================================== SERVICES ================================== */
+
+.services {
+  padding: 5rem 0;
+}
+
+.services .section-title,
+.services .section-desc {
+  text-align: center;
+}
+
+.services-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6.4rem;
+  gap: 3rem;
+}
+
+.services-card_item {
+  width: 37.4rem;
+  text-align: center;
+}
+
+.services-card_item h3 {
+  font-size: 2.8rem;
+  color: var(--secondary);
+  margin: 3.9rem 0 1.6rem;
+  text-align: center;
+}
+
+.services-card_item p {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: var(--light-gray);
+  text-align: center;
+}
+
 /* ================================== RESPONSIVE ================================== */
 
 @media (max-width: 930px) {
+  /* ================================== HEADER ================================== */
   .header-action {
     display: none;
   }
@@ -133,5 +235,43 @@ header img {
     background-color: transparent;
     border: none;
     font-size: 2rem;
+  }
+
+  /* ================================== HERO ================================== */
+  .hero .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .hero-left h1 {
+    width: 100%;
+    font-size: 5.5rem;
+  }
+
+  .hero-left p {
+    font-size: 1.8rem;
+  }
+
+  .hero-left_btns {
+    justify-self: center;
+  }
+
+  /* ================================== SERVICES ================================== */
+
+  .services-card {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 540px) {
+  /* ================================== HERO ================================== */
+
+  .hero-left_btns {
+    flex-direction: column;
   }
 }
